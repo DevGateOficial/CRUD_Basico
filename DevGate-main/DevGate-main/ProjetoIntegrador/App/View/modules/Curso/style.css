@@ -1,0 +1,142 @@
+/* ROOT */
+
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap);
+
+/* Variaveis utilizadas no CSS */
+:root{
+    --header-height: 3.5rem;
+
+    /* Cores */
+    --title-color: hsl(250, 8%, 15%);
+    --text-color: hsl(250, 8%, 35%);
+    --body-color: hsl(250, 60%, 98%);
+    --container-color: #fff;
+    --shadow: hsla(0, 0%, 15%, .1);
+
+    /* Fontes e tamanho das letras */
+    --body-font: 'Poppins', 'sans-serif';
+    --biggest-font-size: 4rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1.2rem;
+    --smal-font-size: 1.05rem;
+    --smaller-font-size: .813rem;
+
+    /* Peso da fonte */
+    --font-medium: 600;
+    --font-bold: 600;
+
+
+    --mb-0-5: .5rem;
+    --mb-0-75: .75rem;
+    --mb-1: 1rem;
+    --mb-1-5: 1.5rem;
+    --mb-2: 2rem;
+    --mb-2-5: 2.5rem;
+    --mb-3: 3rem;
+
+    --z-tooltip: 10;
+    --z-fixed: 100;
+}
+
+@media screen and (max-width: 992px){
+    :root{
+        --biggest-font-size: 2rem;
+        --h1-font-size: 1.5rem;
+        --h2-font-size: 1.25rem;
+        --h3-font-size: 1rem;
+        --normal-font-sizer: .95rem;
+        --smal-font-size: .88rem;
+        --smaller-font-size: .75rem;
+    }
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h3{
+    margin-left: 45%;
+}
+
+table, th, td{
+    border: 1px solid;
+    text-align: center;
+}
+
+table{
+    width: 50%;
+}
+
+th{
+    font: bold;
+    font-size: 20px;
+}
+
+label, input{
+    width: 100%;
+}
+
+legend{
+    text-align: center;
+    font: bolder;
+    font-size: 30px;
+    color: var(--title-color);
+}
+
+input[type=text]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid purple;
+    border-radius: 4px;
+}
+
+input[type=text]:focus{
+    background-color: lightblue;
+}
+
+input[type=submit]{
+    background-color: #7b04aa;
+    border: none;
+    color: var(--text-color);
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* LandingPage */
+
+.escolha_usuario{
+    position: absolute;
+    display: flex;
+    padding-top: 50px;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.botoes_escolha{
+    position: absolute;
+    display: flex;
+    width: 50%;
+    background-color: #04AA6D;
+}
+
+button{
+    background-color: #236fb6;
+    border: 2px black solid;
+    color: white;
+    width: auto;
+    padding-left: 30%;
+    padding: 16px 32px;
+    text-decoration: none;
+    cursor: pointer;
+}
