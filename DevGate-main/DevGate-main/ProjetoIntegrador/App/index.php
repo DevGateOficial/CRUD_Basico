@@ -1,7 +1,7 @@
 <?php
 
-    include 'Controller/CursoController.php';
-    include 'Controller/UserController.php';
+    include 'DevGate-main/DevGate-main/ProjetoIntegrador/Controller/CursoController.php';
+    include 'DevGate-main/DevGate-main/ProjetoIntegrador/Controller/UserController.php';
 
     $url = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 

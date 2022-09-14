@@ -8,7 +8,7 @@
         {
             $dsn = "mysql:host=localhost;dbname=devgate_database";
 
-            $this->connection = new PDO($dsn, 'root', 'Daniel011067kkk#');
+            $this->connection = new PDO($dsn, 'root', 'root');
         }
 
         public function insert(CursoModel $model)
