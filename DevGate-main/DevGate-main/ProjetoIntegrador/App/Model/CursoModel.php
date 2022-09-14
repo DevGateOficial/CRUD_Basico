@@ -2,7 +2,7 @@
 
     class CursoModel{
         
-        public $id, $nome, $descricao, $objetivos;
+        public $id, $nomeCurso, $descricao, $objetivos, $hiperlink;
 
         public $rows;
 
@@ -16,7 +16,7 @@
             {
                 $dao->insert($this);
             }
-            elseSSA
+            else
             {
                 $dao->update($this);
             }

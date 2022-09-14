@@ -6,31 +6,32 @@
 
         public function __construct()
         {
-            $dsn = "mysql:host=localhost;dbname=plataforma_ensino";
+            $dsn = "mysql:host=localhost;dbname=devgate_database";
 
-            $this->connection = new PDO($dsn, 'root', '');
+            $this->connection = new PDO($dsn, 'root', 'Daniel011067kkk#');
         }
 
         public function insert(CursoModel $model)
         {
-            $sql = "INSERT INTO cursos (nome, descricao, objetivos) VALUES (?, ?, ?) ";
+            $sql = "INSERT INTO curso (nomeCurso, descricao, objetivos, hiperlink) VALUES (?, ?, ?, ?)";
 
             $stmt = $this->connection->prepare($sql);
 
-            $stmt->bindValue(1, $model->nome);
+            $stmt->bindValue(1, $model->nomeCurso);
             $stmt->bindValue(2, $model->descricao);
             $stmt->bindValue(3, $model->objetivos);
+            $stmt->bindValue(4, $model->hiperlink);
 
             $stmt->execute();
         }
 
         public function update(CursoModel $model)
         {
-            $sql = "UPDATE cursos SET nome = ?, descricao = ?, objetivos = ? WHERE id = ? ";
+            $sql = "UPDATE cursos SET nomeCurso = ?, descricao = ?, objetivos = ?, hiperlink = ?, WHERE id = ? ";
 
             $stmt = $this->connection->prepare($sql);
 
-            $stmt->bindValue(1, $model->nome);
+            $stmt->bindValue(1, $model->nomeCurso);
             $stmt->bindValue(2, $model->descricao);
             $stmt->bindValue(3, $model->objetivos);
             $stmt->bindValue(4, $model->id);
@@ -40,7 +41,7 @@
 
         public function select()
         {
-            $sql = "SELECT * FROM cursos";
+            $sql = "SELECT * FROM curso";
 
             $stmt = $this->connection->prepare($sql);
             $stmt->execute();
